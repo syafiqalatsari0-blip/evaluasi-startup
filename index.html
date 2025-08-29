@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Lokal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="ChatGPT Image 29 Agu 2025, 08.42.36.png" alt="Logo Brand Lokal" class="logo-img">
+                <span>Brand Lokal</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Produk Brand Lokal</h1>
+            <p class="tagline">Elegan • Berkelas • Timeless</p>
+            <p class="desc">
+                "Setiap produk kami dibuat dengan hati, menghadirkan kualitas lokal dengan rasa global."<br>
+                "Menggabungkan tradisi dan inovasi untuk menciptakan karya yang tak lekang oleh waktu."
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <p class="about-intro">Brand Lokal hadir sejak 2026 dengan misi mengangkat karya anak bangsa agar dikenal hingga mancanegara.</p>
+            <div class="brand-list">
+                <div class="brand-card"><a href="https://www.instagram.com/calledelarache?igsh=am9nMXkyempjdzdq" target="_blank">CALLE</a></div>
+                <div class="brand-card"><a href="https://www.instagram.com/snsbworld?igsh=bGJ2YmQ4ZDlmdzNm" target="_blank">SNSB</a></div>
+                <div class="brand-card"><a href="https://www.instagram.com/prefacewearhouse?igsh=dTdwNnp2aGphZzk3" target="_blank">PREFACE</a></div>
+                <div class="brand-card"><a href="https://www.instagram.com/chambredelavain?igsh=MTJwanM4eGdqbnA0dg==" target="_blank">CHAMBRE</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2>E-commerce Kami</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3><a href="https://calle.co.id" target="_blank">CALLE Official Store</a></h3>
+                    <p>Koleksi fashion modern dengan sentuhan budaya lokal.</p>
+                    <a href="https://www.instagram.com/calledelarache?igsh=am9nMXkyempjdzdq" target="_blank" class="btn-link">Kunjungi CALLE</a>
+                </div>
+                <div class="product-card">
+                    <h3><a href="https://snsb.id" target="_blank">SNSB Marketplace</a></h3>
+                    <p>Marketplace produk SNSB, dari pakaian hingga aksesoris.</p>
+                    <a href="https://www.instagram.com/snsbworld?igsh=bGJ2YmQ4ZDlmdzNm" target="_blank" class="btn-link">Kunjungi SNSB</a>
+                </div>
+                <div class="product-card">
+                    <h3><a href="https://preface.co.id" target="_blank">PREFACE Shop</a></h3>
+                    <p>Produk lifestyle & fashion eksklusif.</p>
+                    <a href="https://www.instagram.com/prefacewearhouse?igsh=dTdwNnp2aGphZzk3" target="_blank" class="btn-link">Kunjungi PREFACE</a>
+                </div>
+                <div class="product-card">
+                    <h3><a href="https://chambre.co.id" target="_blank">CHAMBRE Store</a></h3>
+                    <p>Koleksi fashion premium dengan desain elegan.</p>
+                    <a href="https://www.instagram.com/chambredelavain?igsh=MTJwanM4eGdqbnA0dg==" target="_blank" class="btn-link">Kunjungi CHAMBRE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea rows="5" placeholder="Pesan Anda" required></textarea>
+                    <button type="submit" class="submit-btn">Kirim Pesan</button>
+                </form>
+                <div class="contact-info">
+                    <p><strong>Alamat:</strong> Jln. Sunan Giri, Jambi, Indonesia</p>
+                    <p><strong>Email:</strong> syafiqalatsari0@gmail.com</p>
+                    <p><strong>Telepon:</strong> +62 821 8463 6610</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Brand Lokal. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('.nav-links a, .cta-button').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if(this.getAttribute('href') && this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form handler
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah terkirim.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
