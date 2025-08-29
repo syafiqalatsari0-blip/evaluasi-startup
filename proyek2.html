@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Produk - Calle Marketplace</title>
+
+  <!-- CSS langsung di dalam -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #111;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: #000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .header nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #aaa;
+      transition: color 0.3s;
+    }
+    .header nav a:hover {
+      color: #fff;
+    }
+
+    .product-detail {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+      justify-content: center;
+      text-align: left;
+    }
+    .product-info {
+      max-width: 500px;
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #222;
+    }
+    .product-info h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .product-info .price {
+      font-size: 1.5rem;
+      color: #0ff;
+      margin-bottom: 1rem;
+    }
+    .product-info .desc {
+      margin-bottom: 1rem;
+      color: #ccc;
+    }
+    .features {
+      margin-bottom: 1.5rem;
+    }
+    .features li {
+      margin-left: 1.2rem;
+      list-style: circle;
+    }
+
+    .btn-buy, .btn-cart {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .btn-buy {
+      background: #0ff;
+      color: #000;
+      font-weight: bold;
+    }
+    .btn-buy:hover {
+      background: #0cc;
+    }
+    .btn-cart {
+      background: #333;
+      color: #fff;
+    }
+    .btn-cart:hover {
+      background: #555;
+    }
+
+    .related-products {
+      padding: 2rem;
+      text-align: center;
+    }
+    .related-products h2 {
+      margin-bottom: 1.5rem;
+    }
+    .related-grid {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .related-card {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 0 8px #222;
+    }
+    .related-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+    .related-card p {
+      margin-bottom: 0.5rem;
+      color: #0ff;
+    }
+    .related-card a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    .related-card a:hover {
+      text-decoration: underline;
+    }
+
+    .flowchart {
+      padding: 2rem;
+      background: #1a1a1a;
+      margin: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #222;
+    }
+    .flowchart h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      color: #aaa;
+    }
+  </style>
+
+  <!-- MermaidJS -->
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, theme: "dark" });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Calle Marketplace</div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="#kategori">Kategori</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- Product Detail -->
+  <main class="product-detail">
+    <div class="product-info">
+      <h1>Kemeja Calle Signature</h1>
+      <p class="price">Rp 459.000</p>
+      <p class="desc">
+        Kemeja signature dari Calle dengan potongan modern dan bahan ringan. 
+        Desain minimalis khas Calle yang memberikan kesan elegan dan stylish untuk setiap kesempatan.
+      </p>
+      <ul class="features">
+        <li>Bahan: Katun Linen Premium</li>
+        <li>Ukuran: S, M, L, XL</li>
+        <li>Warna: Putih, Hitam, Biru Navy</li>
+      </ul>
+      <button class="btn-buy">Beli Sekarang</button>
+      <button class="btn-cart">+ Tambah ke Keranjang</button>
+    </div>
+  </main>
+
+  <!-- Related Products -->
+  <section class="related-products">
+    <h2>Produk Terkait</h2>
+    <div class="related-grid">
+      <div class="related-card">
+        <h3>Kaos Calle Basic</h3>
+        <p>Rp 199.000</p>
+        <a href="produk-detail-calle.html">Lihat Detail</a>
+      </div>
+      <div class="related-card">
+        <h3>Calle Tote Bag</h3>
+        <p>Rp 249.000</p>
+        <a href="produk-detail-calle.html">Lihat Detail</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flowchart -->
+  <section class="flowchart">
+    <h2>Alur Halaman Produk Calle</h2>
+    <div class="mermaid">
+      flowchart TD
+        A[Beranda] --> B[Kategori Produk Calle]
+        B --> C[Detail Produk Calle]
+        C --> D{Aksi User}
+        D -->|Beli Sekarang| E[Checkout]
+        D -->|Tambah ke Keranjang| F[Keranjang Belanja]
+        C --> G[Produk Calle Terkait]
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Calle Marketplace - Semua Hak Dilindungi.</p>
+  </footer>
+</body>
+</html>
